@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt('Enter number:');
+    let arrStr = str.split(" ");
+    let str2 = arrStr.join("-");
+
+
+    function convertNumber() {
+        let numbers = str.split('');
+        console.log(numbers);
+        for (let i = 0; i < numbers.length-1; i++) {
+            if(numbers[i]%2 === 0 && numbers[i+1]%2===0){
+                numbers.splice(i+1,0,"-");
+                i++;
+            }
+        }
+        let result = numbers.join("");
+        document.write(result);
+    }
+    convertNumber();
+</script>
+</body>
+</html>
